@@ -1,0 +1,115 @@
+
+.badge-stars .rating{
+    display: grid;
+}
+.badge-stars {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 0.9rem;
+ }
+.badge-stars i{
+    color:yellow;
+    font-size: 1rem!important;
+} 
+i.fa-star-half-alt{
+    transform: rotateY(180deg)!important;
+}
+.product-card .badge-brand{
+     
+     position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #000000b3;
+    color: white!important;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 1rem!important;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}  
+  
+/*########### العنصر المميز ###############*/
+.corner-ribbon-3d {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    z-index: 10;
+    transform-origin: 100% 0%;
+ }
+
+.ribbon-main {
+    position: absolute;
+    top: 15px;
+    right: -25px;
+    width: 120px;
+    padding: 8px 0;
+    background: linear-gradient(45deg,rgb(77, 187, 255),rgb(0, 112, 249));
+    color: white!important;
+    font-weight: bold;
+    font-size: 1rem;
+    text-align: center;
+    transform: rotate(45deg);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition:all .5s;
+}
+
+.ribbon-fold {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 15px 15px 0 0;
+    border-color:rgb(28, 102, 240) transparent transparent transparent;
+    transform: rotate(45deg);
+    filter: drop-shadow(0 2px 2px rgba(0,0,0,0.3));
+}
+
+.ribbon-shadow {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    background: rgba(0,0,0,0.1);
+    transform: rotate(45deg) translate(-5px, 5px);
+    filter: blur(2px);
+    z-index: -1;
+}
+.corner-ribbon-3d + .badge-stars{
+    top: 40px !important;
+}
+.gallery .corner-ribbon-3d + .badge-stars{
+    top: 10px !important;
+}
+.corner-ribbon-3d + .badge-stars + .badge-brand{
+    right: unset !important;
+    left: 10px !important;
+}
+
+/*########### العنصر المميز ###############*/
+
+.product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 8px #00000026;
+    z-index:3;
+}
+.product-card {
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.card-img-top{
+    height: 250px!important;
+}
+.product-card:hover .badge-stars i{
+    opacity: 0;
+    transition: all .3s;
+}

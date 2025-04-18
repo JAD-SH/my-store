@@ -1,0 +1,389 @@
+
+
+/* التأثيرات العامة للبطاقة */
+.premium-offer-card {
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background: #fff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    z-index: 1;
+}
+
+.premium-offer-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 15px 40px rgba(0, 112, 249, 0.2);
+}
+
+/* شريط العرض المميز */
+.premium-ribbon {
+    position: absolute;
+    top: 15px;
+    left: 0px;
+    background: linear-gradient(135deg, #ff8a00, #ff0058);
+    color: white;
+    padding: 6px 20px;
+    font-weight: bold;
+    font-size: 0.8rem;
+    z-index: 3;
+    clip-path: polygon(0 0, 100% 0, 90% 50%, 100% 100%, 0 100%, 10% 50%);
+    animation: ribbonGlow 2s infinite alternate;
+}
+
+.ribbon-tail {
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 10px solid #c00040;
+}
+
+@keyframes ribbonGlow {
+    0% { box-shadow: 0 0 5px #ff005880; }
+    100% { box-shadow: 0 0 20px #ff0058cc; }
+}
+
+
+/* تحسينات حاوية الصورة */
+.product-image-container {
+    position: relative;
+    max-height: 300px;
+    overflow: hidden;
+    border-bottom: 1px solid #0000000d;
+}
+
+.product-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+ 
+.premium-offer-card .badge-brand {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    background: #000000b3;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* شارة الخصم ثلاثية الأبعاد */
+.discount-badge-3d {
+    position: absolute;
+    top: -35px;
+    right: 20px;
+    perspective: 1000px;
+    z-index: 2;
+}
+
+.badge-front {
+    background: linear-gradient(135deg, #ff4757, #ff6b81);
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transform: rotate(-15deg);
+    box-shadow: 0 5px 15px rgba(255, 71, 87, 0.4);
+    position: relative;
+    z-index: 2;
+}
+
+.badge-side {
+    position: absolute;
+    top: 5px;
+    right: -3px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #d13a48, #e05a6e);
+    transform: rotate(-15deg) translateZ(-10px);
+    z-index: 1;
+}
+
+/* محتوى العرض */
+.offer-content {
+    padding: 20px;
+    position: relative;
+    background-color: #fff;
+}
+
+.offer-title {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #333;
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+}
+
+.offer-title:after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background: linear-gradient(to right, #3498db, #2ecc71);
+    border-radius: 3px;
+}
+
+.offer-description {
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+/* العد التنازلي المطور */
+.countdown-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin: 20px 0;
+    background: rgba(245, 245, 245, 0.7);
+    padding: 10px;
+    border-radius: 8px;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.countdown-segment {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 50px;
+}
+
+.countdown-number {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #333;
+    background: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 5px;
+}
+
+.countdown-label {
+    font-size: 0.7rem;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.countdown-separator {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ff4757;
+    margin: 0 2px;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+/* قسم السعر */
+.price-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 15px 0;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.original-price {
+    font-size: 0.9rem;
+    color: #999;
+    text-decoration: line-through;
+}
+
+.discounted-price {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #ff4757;
+}
+
+.price-save {
+    background: #e3f2fd;
+    color: #1976d2;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+/* تقييم النجوم */
+.rating-stars {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin: 7px 0;
+}
+
+.stars-container {
+    display: flex;
+}
+
+.rating-stars i {
+    color: yellow;
+    font-size: 1.1rem!important;
+    position: relative;
+}
+
+i.fa-star-half-alt{
+    transform: rotateY(180deg)!important;
+}
+.rating-text {
+    font-size: 0.8rem;
+    color: #666;
+}
+
+/* زر الإجراء */
+.offer-cta-btn {
+    background: linear-gradient(to right, #0070f9, #00a1ff);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 4px 15px rgba(0, 112, 249, 0.3);
+    overflow: hidden;
+    position: relative;
+}
+
+.offer-cta-btn span {
+    position: relative;
+    z-index: 2;
+}
+
+.offer-cta-btn i {
+    position: relative;
+    z-index: 2;
+    transition: transform 0.3s;
+}
+
+.offer-cta-btn:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #00a1ff, #0070f9);
+    transition: all 0.4s;
+    z-index: 1;
+}
+
+.offer-cta-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 112, 249, 0.4);
+}
+
+.offer-cta-btn:hover i {
+    transform: translateX(-5px);
+}
+
+.offer-cta-btn:hover:before {
+    left: 0;
+}
+ 
+/*########### العنصر المميز ###############*/
+.corner-ribbon-3d {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 90px;
+    height: 90px;
+    overflow: hidden;
+    z-index: 10;
+    transform-origin: 100% 0%;
+ }
+
+.ribbon-main {
+    position: absolute;
+    top: 12px;
+    right: -29px;
+    width: 120px;
+    padding: 8px 0;
+    background: linear-gradient(45deg,rgb(77, 187, 255),rgb(0, 112, 249));
+    color: white!important;
+    font-weight: bold;
+    font-size: 1rem;
+    text-align: center;
+    transform: rotate(45deg);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition:all .5s;
+}
+
+.ribbon-fold {
+    position: absolute;
+    top: -2px;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 15px 15px 15px 15px;
+    border-color:rgb(28, 102, 240) transparent transparent transparent;
+    transform: rotate(45deg);
+    filter: drop-shadow(0 2px 2px rgba(0,0,0,0.3));
+}
+
+.ribbon-shadow {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    background: rgba(0,0,0,0.1);
+    transform: rotate(45deg) translate(-5px, 5px);
+    filter: blur(2px);
+    z-index: -1;
+}
+.corner-ribbon-3d + .badge-stars{
+    top: 40px !important;
+}
+.corner-ribbon-3d + .badge-stars + .badge-brand{
+    right: unset !important;
+    left: 10px !important;
+}
+
+/*########### العنصر المميز ###############*/
+
+.pulse {
+    animation: blink 1.5s infinite;
+    transition: all 0.3s cubic-bezier(0.53, 0.79, 0, 1.45);
+    border-radius: 8px;
+    background-color: #ffeae6;
+    color: #f32727;
+    font-weight: bold;
+}
+

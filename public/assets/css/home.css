@@ -1,0 +1,49 @@
+ 
+.course-img{
+    max-width:100%;
+    filter: drop-shadow(1px 1px 1px #d3d3d330) drop-shadow(-1px -1px 1px #d3d3d330);
+}
+ 
+.carousel-offer{
+    max-height: 35vh;
+    overflow: hidden;
+}
+
+.carousel-offer div img{
+    height: 100%;
+    max-height: 35vh;
+    
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+    width: 50px;
+    height: 50px;
+    filter: drop-shadow(2px 3px 2px black);
+}
+.rating-stars i.fa-star-half-alt ,.rating i.fa-star-half-alt {
+    transform: rotateY(180deg);
+}
+ 
+   
+.carousel-indicators button {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 0 5px;
+    background-color: #ccc;
+    border: none;
+}
+
+.carousel-indicators .active {
+    background-color:rgb(255, 52, 204);
+}
+.carousel-indicators {
+    top: 75%;
+    bottom:unset;
+}
+  
+.carousel-indicators [data-bs-target] {
+    width: 10px;
+    height: 10px;
+}

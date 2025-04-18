@@ -1,0 +1,59 @@
+/*       img-shape         */
+.container-items{
+    width: 100%;
+    top: -4px;
+    position: relative;
+}
+.first, .second, .third {
+    width: 112px;
+    background-color: transparent;
+    height: 65px;
+    position: absolute;
+    border-left: 8px solid;
+    border-right: 8px solid;
+    border-color: var(--bs-body-bg);
+}
+.items {
+position: absolute;
+}
+.second {
+transform: rotate(60deg);
+}
+.third {
+transform: rotate(-60deg);
+}
+.page-header {
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    background-size: cover;
+    background-position: 50%;
+}
+
+/*                 */
+.testimonials img{
+    width: 100px;
+    height: 100px;
+}
+ 
+
+/*                 */
+ 
+   
+.links-cat{
+    display: none;
+}
+.icon-shape:hover{
+    scale:1.3;
+    transform: rotate(20deg);
+    cursor: none;
+}
+
+.dealer-footer a{
+    padding: 10px 15px;
+}
+.dealer-footer a:hover{
+    background-color: #92929223;
+}

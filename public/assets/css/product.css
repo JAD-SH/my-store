@@ -1,0 +1,136 @@
+.small-img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: 0.3s;
+}
+.small-img:hover, .small-img.active {
+    border-color: #007bff;
+    scale:1.1;
+}
+.rating i , .rating-stars i{
+    color: yellow;
+    font-size: 1.1rem!important;
+}
+i.fa-star-half-alt{
+    transform: rotateY(180deg)!important;
+}
+.rating i {
+    display: block;
+} 
+.comment-box {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+.comment-box:hover {
+    scale:1.05;
+}
+.img-fluid{
+    height: 60vh;
+    width: auto;
+}
+.product-img{
+    display:inline-block;
+    width: auto;
+}
+/**####################### */
+.zoom-container {
+    position: relative;
+    margin: 50px auto;
+}
+
+.zoom-image {
+    width: 100%;
+    display: block;
+}
+
+.zoom-lens {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border: 2px solid #aaa;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    pointer-events: none;
+    display: none;
+    z-index: 10;
+}
+
+.zoom-result {
+    position: absolute;
+    top: 0;
+    right: calc(100% + 20px);
+    width: 200px;
+    height: 200px;
+    border: 1px solid #ddd;
+    background-repeat: no-repeat;
+    display: none;
+    z-index: 10;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+.zoom-lens{
+    transition:none!important;
+}
+.product-color{
+    line-height: 50%;
+}
+.product-color span{
+    width: 30px;
+    height: 30px;
+    background-color:red;
+    margin:5px;
+    padding:5px;
+    display: inline-block;
+    border-radius:30%;
+}
+.product-color span:hover{
+    box-shadow:4px 0px 4px var(--color), -4px 0px 4px var(--color),0px 4px 4px var(--color), 0px -4px 4px var(--color) ;
+    cursor:pointer;
+    scale:1.3;
+    transition:all .3s;
+}
+ul.list-group-flush li:hover{
+    scale:1.2;
+    cursor: context-menu;
+    z-index: 2;
+}
+ul.list-group-flush li strong{
+    white-space:nowrap;
+}
+ul.list-group-flush li ul li:hover{
+    scale:none !important;
+}
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 15px;
+}
+.gallery img {
+    width: auto;
+    height: 175px; /* ضبط الارتفاع تلقائيًا */
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+}
+.gallery a:hover{
+    scale:1.5;
+    z-index: 11;
+}
+.gallery a{
+    position:relative;
+}
+.gallery .ribbon-main,.gallery .ribbon-fold{
+    background: linear-gradient(45deg, #ff4d4d, #c500f9)!important;
+    border-color: #c500f9 transparent transparent transparent;
+}
+.gallery a:hover .badge-stars{
+    opacity:0;
+}
+
